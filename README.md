@@ -7,7 +7,14 @@
 ```php spark migrate``` <br>
 ```php spark serve```
 
-## Halaman yang dapat diakses
+## Halaman awal untuk semua pengguna
+- ```/user/login```
+- ```/user/register```
+
+## Halaman yang dapat diakses admin
 - ```/products```
+- ```/property```
+ 
+## Halaman yang dapat diakses pengguna biasa
 - ```/digital-products```
 - ```/physical-products```
