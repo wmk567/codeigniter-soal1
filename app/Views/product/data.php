@@ -76,5 +76,7 @@
     <?php else: ?>
         <p>No products available.</p>
     <?php endif; ?>
+
+    <p><a href="/product/create">Create New Data</a></p>
 </body>
 </html>

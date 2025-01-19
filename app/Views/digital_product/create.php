@@ -15,7 +15,7 @@
         <textarea id="description" name="description" required></textarea><br><br>
 
         <label for="price">Price:</label>
-        <input type="number" id="price" name="price" required><br><br>
+        <input type="number" id="price" name="price" step="0.01" min="0" required><br><br>
 
         <input type="hidden" id="digital" name="type" value="digital">
 
@@ -26,6 +26,13 @@
 
         <button type="submit">Save Product</button>
     </form>
+
+    <br>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div>
+            <?= session()->getFlashdata('error'); ?>
+        </div>
+    <?php endif; ?>
 
     <p><a href="/digital-products">Back to Product List</a></p>
 </body>

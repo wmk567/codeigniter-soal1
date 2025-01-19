@@ -76,5 +76,14 @@
                 
         <button type="submit">Add Property</button>
     </form>
+
+    <p><a href="/products">Back to Product List</a></p>
+
+    <br>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div>
+            <?= session()->getFlashdata('error'); ?>
+        </div>
+    <?php endif; ?>
 </body>
 </html>

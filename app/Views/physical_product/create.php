@@ -28,17 +28,24 @@
         <textarea id="description" name="description" required></textarea><br><br>
 
         <label for="price">Price:</label>
-        <input type="number" id="price" name="price" required><br><br>
+        <input type="number" id="price" name="price" step="0.01" min="0" required><br><br>
 
         <div id="quantityField">
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity"><br><br>
+            <input type="number" id="quantity" name="quantity" min="0" required><br><br>
         </div>
 
         <input type="hidden" id="physical" name="type" value="physical">
 
         <button type="submit">Save Product</button>
     </form>
+
+    <br>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div>
+            <?= session()->getFlashdata('error'); ?>
+        </div>
+    <?php endif; ?>
 
     <p><a href="/physical-products">Back to Product List</a></p>
 </body>

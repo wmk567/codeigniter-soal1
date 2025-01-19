@@ -7,7 +7,7 @@
 </head>
 <body>
     <?php if (isset($property[0])): ?>
-        <h1>Create a New Product</h1>
+        <h1>Edit Property</h1>
         <form action="/api/property/update" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_method" value="PUT">
             <input type="hidden" id="id" name="id" value="<?= esc($property[0]['id']) ?>" required>
@@ -19,7 +19,7 @@
             <label for="property_value">Property Value:</label>
             <textarea id="property_value" name="property_value" required><?= esc($property[0]['property_value']) ?></textarea><br><br>
 
-            <button type="submit">Save Product</button>
+            <button type="submit">Save Property</button>
         </form>
 
     <?php else: ?>

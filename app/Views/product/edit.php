@@ -33,7 +33,7 @@
             <textarea id="description" name="description" required><?= esc($products[0]['description']) ?></textarea><br><br>
 
             <label for="price">Price:</label>
-            <input type="number" id="price" name="price" value="<?= esc($products[0]['price']) ?>" required><br><br>
+            <input type="number" id="price" name="price" step="0.01" min="0" value="<?= esc($products[0]['price']) ?>" required><br><br>
 
             <div id="quantityField">
                 <label for="quantity">Quantity:</label>
@@ -56,6 +56,13 @@
 
     <?php else: ?>
         <p>No products available.</p>
+    <?php endif; ?>
+
+    <br>
+    <?php if (session()->getFlashdata('error')): ?>
+        <div>
+            <?= session()->getFlashdata('error'); ?>
+        </div>
     <?php endif; ?>
     
     <p><a href="/products">Back to Product List</a></p>

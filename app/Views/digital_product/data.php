@@ -68,5 +68,8 @@
     <?php else: ?>
         <p>No products available.</p>
     <?php endif; ?>
+
+    <p><a href="/physical-products">Physical Products</a></p>
+    <p><a href="/digital-product/create">Create New Data</a></p>
 </body>
 </html>
