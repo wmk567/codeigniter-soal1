@@ -69,3 +69,12 @@ database.default.port = 3306
 #--------------------------------------------------------------------
 
 # logger.threshold = 4
+
+cache.handler = redis
+cache.backupHandler = file
+
+redis.host = 127.0.0.1
+redis.password = null
+redis.port = 6379
+redis.timeout = 0
+redis.database = 0
