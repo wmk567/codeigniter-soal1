@@ -6,6 +6,13 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+
+$routes->get('/user/login', 'UserController::index');
+$routes->get('/user/register', 'UserController::register');
+
+$routes->post('/api/user/login', 'UserController::login');
+$routes->post('/api/user/register', 'UserController::create');
+
 $routes->get('/products', 'ProductController::index');
 $routes->get('/property', 'PropertyController::index');
 

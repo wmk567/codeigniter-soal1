@@ -55,4 +55,22 @@ abstract class BaseController extends Controller
 
         // E.g.: $this->session = service('session');
     }
+
+    public function checkUser()
+    {
+        $session = \Config\Services::session();
+        if (!$session->get('is_logged_in')) {
+            return redirect()->to('/user/login')->with('error', 'Please log in first.');
+        }
+    }
+
+    public function checkUserAdmin(){
+        $session = \Config\Services::session();
+        if (!$session->get('is_logged_in')) {
+            return redirect()->to('/user/login')->with('error', 'Please log in first.');
+        }
+        if($session->get('type') !== 'admin'){
+            return redirect()->to('/user/login')->with('error', 'Permission failed');
+        }
+    }
 }
