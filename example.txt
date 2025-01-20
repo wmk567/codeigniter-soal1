@@ -1,0 +1,14 @@
+Create new property for a product
+{
+    "product_id": 1,
+    "property_name": "trial01", 
+    "property_value": "trial01"
+}
+
+Edit property for a product
+{
+    "id": 1,
+    "product_id": 1,
+    "property_name": "trial01", 
+    "property_value": "trial01"
+}
